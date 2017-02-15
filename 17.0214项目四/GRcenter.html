@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no"/>
+    <!--WebApp全屏模式   隐藏地址栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--苹果强制全屏显示-->
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <!--强制全屏显示-->
+    <meta name="full-screen" content="yes"/>
+    <!--制定iphone中safari顶端的状态条的样式（default:白色，black:黑色，black-translucent：半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!--告诉设备忽略将页面中的数字识别为电话号码 -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!--告诉设备忽略将页面中的地址识别 -->
+    <meta name="format-detection" content="address=no"/>
+    <meta charset="utf-8">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+
+        //   rem   em 相对单位  基础
+        function refresh() {
+            var deviceWidth = document.documentElement.clientWidth;
+            if (deviceWidth > 1080) {
+                document.documentElement.style.fontSize = 1080 / 10.8 + "px";
+            } else {
+                //  540    50
+
+                document.documentElement.style.fontSize = deviceWidth / 10.8 + "px";
+            }
+        }
+        refresh();
+        window.onresize = function () {
+            refresh();
+        };
+
+        (
+                $(function(){
+                    $(".mid-img2").hover(function(){
+                        $(this).addClass("img2-bg2")
+                    },function(){
+                        $(this).removeClass("img2-bg2")
+                    });
+                })
+        )();
+
+
+
+
+    </script>
+    <link rel="stylesheet" href="css/GRcenter.css">
+</head>
+<body>
+<div class="ZT">
+    <div class="midBoX">
+        <div class="mid-img"></div>
+        <p>健康体验预约</p>
+        <div class="mid-img2 img2-bg1 "></div>
+    </div>
+    <div class="midBoX marginNone">
+        <div class="mid-img"></div>
+        <p>健康体验预约</p>
+        <div class="mid-img2 img2-bg1 "></div>
+    </div>
+</div>
+<div class="lgBoX">
+    <div class="lg-img"></div>
+    <p>华西绿通预约</p>
+    <div class="mid-img2 img2-bg1 " style="float: left;margin-left: 1.75rem;margin-top: 0.2rem"></div>
+
+
+</div>
+<div class="ZT" style="margin-bottom: 0.3rem">
+    <div class="midBoX">
+        <div class="mid-img"></div>
+        <p>健康体验预约</p>
+        <div class="mid-img2 img2-bg1 "></div>
+    </div>
+    <div class="midBoX marginNone">
+        <div class="mid-img"></div>
+        <p>健康体验预约</p>
+        <div class="mid-img2 img2-bg1 "></div>
+    </div>
+</div>
+
+</body>
+</html>

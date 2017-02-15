@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no"/>
+    <!--WebApp全屏模式   隐藏地址栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--苹果强制全屏显示-->
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <!--强制全屏显示-->
+    <meta name="full-screen" content="yes"/>
+    <!--制定iphone中safari顶端的状态条的样式（default:白色，black:黑色，black-translucent：半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!--告诉设备忽略将页面中的数字识别为电话号码 -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!--告诉设备忽略将页面中的地址识别 -->
+    <meta name="format-detection" content="address=no"/>
+    <meta charset="utf-8">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+
+        //   rem   em 相对单位  基础
+        function refresh() {
+            var deviceWidth = document.documentElement.clientWidth;
+            if (deviceWidth > 1080) {
+                document.documentElement.style.fontSize = 1080 / 10.8 + "px";
+            } else {
+                //  540    50
+
+                document.documentElement.style.fontSize = deviceWidth / 10.8 + "px";
+            }
+        }
+        refresh();
+        window.onresize = function () {
+            refresh();
+        };
+
+        $(function(){
+//            事件委托
+            $(".input-warp").delegate("input","focus",function(){
+                $(this).parent().find(".FD").addClass("BG-cycle")
+            });
+            $(".input-warp").delegate("input","blur",function(){
+                $(this).parent().find(".FD").removeClass("BG-cycle")
+            })
+
+
+
+        });
+
+
+
+    </script>
+    <link rel="stylesheet" href="css/MimaZ.css">
+
+
+</head>
+<body>
+<div id="find">找回密码</div>
+<div class="ZT">
+    <div class="top-line"></div>
+    <div class="mid">
+        <div class="input-warp">
+            <div class="LB"><label for="">账号</label></div>
+            <div class="cycle">
+                <img src="images/cycle.png" alt="">
+                <div class="FD"></div>
+            </div>
+            <input type="text" class="SR" placeholder="请在此输入账号">
+        </div>
+        <div class="input-warp" style="position: relative;top: 0.64rem;">
+            <div class="LB"><label for="">旧密码</label></div>
+            <div class="cycle">
+                <img src="images/cycle.png" alt="">
+                <div class="FD"></div>
+            </div>
+            <input type="text" class="SR" placeholder="请在此输入曾用过旧密码">
+        </div>
+
+        <div class="input-warp" style="position: absolute;bottom: -0.6rem">
+            <div class="LB"><label for="">旧密码2</label></div>
+            <div class="cycle">
+                <img src="images/cycle.png" alt="">
+                <div class="FD"></div>
+            </div>
+            <input type="text" class="SR" placeholder="请在此输入曾用过得旧密码">
+        </div>
+
+    </div>
+    <div class="buttom-line"></div>
+
+
+    <div id="loginIn">
+        <a href="javascript:;">确定</a>
+    </div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

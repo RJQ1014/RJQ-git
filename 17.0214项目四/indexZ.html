@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登陆</title>
+    <!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no"/>
+    <!--WebApp全屏模式   隐藏地址栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--苹果强制全屏显示-->
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <!--强制全屏显示-->
+    <meta name="full-screen" content="yes"/>
+    <!--制定iphone中safari顶端的状态条的样式（default:白色，black:黑色，black-translucent：半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!--告诉设备忽略将页面中的数字识别为电话号码 -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!--告诉设备忽略将页面中的地址识别 -->
+    <meta name="format-detection" content="address=no"/>
+    <meta charset="utf-8">
+
+
+    <style>
+             *{margin: 0;padding: 0}
+        #find{
+            width: 2.5rem;
+            height: 1rem;
+            float: right;
+            font-size: 0.3rem;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            border: 1px solid black;
+        }
+        /*300   65*/
+        #login{
+            width: 3rem;
+            height: 0.65rem;
+            border: 1px solid black;
+        }
+
+
+    </style>
+    <script>
+
+        //   rem   em 相对单位  基础
+        function refresh() {
+            var deviceWidth = document.documentElement.clientWidth;
+            if (deviceWidth > 1080) {
+                document.documentElement.style.fontSize = 1080 / 10.8 + "px";
+            } else {
+                //  540    50
+
+                document.documentElement.style.fontSize = deviceWidth / 10.8 + "px";
+            }
+        }
+        refresh();
+        window.onresize = function () {
+            refresh();
+        }
+    </script>
+</head>
+<body>
+<div id="find">找回密码</div>
+
+<div id="login"><a href="javascript">登陆</a></div>
+
+
+</body>
+</html>

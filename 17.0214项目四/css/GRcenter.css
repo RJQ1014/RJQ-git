@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+html{
+    min-height: 100%;
+    /*height: 100%;*/
+}
+body{
+    height: 100%;
+    font-family: 微软雅黑;
+    background: -moz-linear-gradient( 90deg, rgb(84,99,148) 0%, rgb(177,77,142) 100%);
+    background: -webkit-linear-gradient( 90deg, rgb(84,99,148) 0%, rgb(177,77,142) 100%);
+    background: -ms-linear-gradient( 90deg, rgb(84,99,148) 0%, rgb(177,77,142) 100%);
+}
+.ZT{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.midBoX{
+    float: left;
+    width: 4.8rem;
+    height: 5.18rem;
+    margin-left: 0.4rem;
+    margin-right: 0.35rem;
+    margin-top: 0.52rem;
+    background: rgba(255,255,255,0.4);
+    border-radius: 0.3rem;
+}
+.marginNone{
+    float: right;
+    margin: 0;
+    margin-right: 0.35rem;
+    margin-top: 0.52rem;
+}
+.mid-img{
+    width: 2.92rem;
+    height: 2.92rem;
+    border-radius: 50%;
+    background: url("../images/VIPimage01.png") no-repeat center;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    margin-top: 0.25rem;
+}
+.midBoX p{
+    font-size: 0.42rem;
+    color: white;
+    text-align: center;
+    margin: 0.1rem auto;
+}
+.mid-img2{
+    width: 0.96rem;
+    height: 0.96rem;
+    margin: 0 auto;
+    transition: all ease 0.5s;
+}
+
+.img2-bg1{
+    background: url("../images/appointment_icon.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.img2-bg2{
+    background: url("../images/appointment_%20icon_on.png") no-repeat center;
+    background-size: 100% 100%;
+}
+/*.mid-img2:hover{*/
+    /*background: url("../images/appointment_%20icon_on.png") no-repeat center;*/
+    /*background-size: 100% 100%;*/
+/*}*/
+.lgBoX{
+    width: 9.98rem;
+    height: 4.6rem;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.4);
+    border-radius: 0.3rem;
+    margin-top: 0.38rem;
+    overflow: hidden;
+
+}
+.lg-img{
+    width: 3.9rem;
+    height: 3.9rem;
+    border-radius: 50%;
+    background: url("../images/VIPimage03.png") no-repeat center;
+    background-size: 100% 100%;
+    margin-top: 0.34rem;
+    margin-left: 1.6rem;
+    float: left;
+}
+.lgBoX p{
+    font-size: 0.40rem;
+    color: white;
+    text-align: center;
+    margin-top: 1.2rem;
+}
